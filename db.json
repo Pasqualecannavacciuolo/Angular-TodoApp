@@ -1,7 +1,9 @@
 {
-    "lista": [
-      { "id": 1, "contenuto": "Comprare arance 🍊", "fatto": false },
-      { "id": 2, "contenuto": "Comprare mele 🍎", "fatto": false },
-      { "id": 3, "contenuto": "Comprare broccoli 🥦", "fatto": false }
-    ]
-  }
+  "lista": [
+    {
+      "id": 1,
+      "contenuto": "Comprare arance 🍊",
+      "fatto": false
+    }
+  ]
+}

@@ -8,13 +8,13 @@
     <!-- Content Column -->
     <ng-container matColumnDef="contenuto">
       <th mat-header-cell *matHeaderCellDef> Contenuto </th>
-      <td mat-cell *matCellDef="let element"> {{element.contenuto}} </td>
+      <td [ngStyle]="{'text-decoration': (element.fatto== true) ? 'line-through' : 'none'}" mat-cell *matCellDef="let element"> {{element.contenuto}} </td>
     </ng-container>
   
     <!-- Done Column -->
     <ng-container matColumnDef="fatto">
       <th mat-header-cell *matHeaderCellDef> Fatto </th>
-      <td mat-cell *matCellDef="let element"> {{element.fatto}} </td>
+      <td mat-cell *matCellDef="let element"><input name="{{ element.id }}" type="checkbox" [checked]="element.fatto == true" (change)="deleteItem($event)"/></td>
     </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
