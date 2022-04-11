@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Item } from '../model/item';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent implements OnInit {
+export class ListComponent {
 
-  constructor() { }
+  dataSource: Item[] = [];
+  displayedColumns: string[] = ['id', 'contenuto', 'fatto'];
 
-  ngOnInit(): void {
+  constructor(private http: HttpClient) {
+    this.getAll();
+  }
+
+  getAll() {
+    this.http
+      .get<Item[]>('http://localhost:3000/lista')
+      .subscribe((result) => this.dataSource = result);
   }
 
 }

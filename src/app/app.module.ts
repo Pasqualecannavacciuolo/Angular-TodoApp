@@ -7,6 +7,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MaterialModule } from './material.module';
 import { ListComponent } from './list/list.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -17,9 +19,12 @@ import { ListComponent } from './list/list.component';
   imports: [
     BrowserModule,
     NoopAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule{
+
+}
