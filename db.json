@@ -9,6 +9,11 @@
       "contenuto": "Comprare banane",
       "fatto": false,
       "id": 3
+    },
+    {
+      "contenuto": "Comprare cipolle",
+      "fatto": false,
+      "id": 4
     }
   ]
 }

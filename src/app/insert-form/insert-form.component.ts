@@ -13,7 +13,7 @@ export class InsertFormComponent {
 
   constructor(private http: HttpClient) {}
 
-  profileForm = new FormGroup({
+  todoForm = new FormGroup({
     content: new FormControl(''),
   });
 
@@ -23,7 +23,7 @@ export class InsertFormComponent {
 
   
   onSubmit() {
-    let form_content = this.profileForm.get('content')?.value;
+    let form_content = this.todoForm.get('content')?.value;
     this.newItem.contenuto = form_content;
     this.newItem.fatto = false;
     this.http

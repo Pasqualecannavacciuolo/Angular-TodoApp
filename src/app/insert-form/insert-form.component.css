@@ -1,0 +1,31 @@
+.form-wrapper {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: rgb(180, 117, 231);
+    margin: 0 auto;
+    gap: 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+
+mat-label {
+    font-size: 20px;
+    color: rgba(236, 244, 250, 0.49);
+}
+
+.content-input {
+    width: 100%;
+    font-size: 18px;
+    color: #fafafa;
+}
+
+button {
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin: 15px auto;
+}
