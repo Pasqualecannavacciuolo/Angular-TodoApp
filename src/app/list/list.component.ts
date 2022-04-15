@@ -1,7 +1,7 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Item } from '../model/item';
-import { FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-list',
@@ -19,12 +19,14 @@ export class ListComponent {
   constructor(private http: HttpClient) {
     this.getAll();
   }
+  
 
   getAll() {
     this.http
       .get<Item[]>('http://localhost:3000/lista')
       .subscribe((result) => this.dataSource = result);
   }
+
 
   deleteItem(selected: any): void {
     console.log(
