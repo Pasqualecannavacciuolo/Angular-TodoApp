@@ -4,5 +4,14 @@
     </button>
     <span>My App</span>
     <span class="example-spacer"></span>
+    <!-- Add item button -->
+    <div class="example-button-container">
+      <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" (click)="addItem()">
+        <mat-icon>plus_one</mat-icon>
+      </button>
+    </div>
   </mat-toolbar>
+
+  <app-insert-form *ngIf="showForm"></app-insert-form>
+
   

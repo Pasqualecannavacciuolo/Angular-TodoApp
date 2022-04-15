@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Item } from '../model/item';
 import { FormGroup } from '@angular/forms';
@@ -11,7 +11,10 @@ import { FormGroup } from '@angular/forms';
 export class ListComponent {
 
   dataSource: Item[] = [];
+  newItem: Item | undefined;
   displayedColumns: string[] = ['id', 'contenuto', 'fatto'];
+
+  
 
   constructor(private http: HttpClient) {
     this.getAll();

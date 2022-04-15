@@ -4,6 +4,11 @@
       "id": 1,
       "contenuto": "Comprare arance 🍊",
       "fatto": false
+    },
+    {
+      "contenuto": "Comprare banane",
+      "fatto": false,
+      "id": 3
     }
   ]
 }

@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.css']
 })
-export class ToolbarComponent implements OnInit {
+export class ToolbarComponent {
 
-  constructor() { }
+  showForm = false;
 
-  ngOnInit(): void {
+  addItem() {
+    if(this.showForm) {
+      this.showForm = false;
+    } else {
+      this.showForm = true;
+    }
   }
 
 }

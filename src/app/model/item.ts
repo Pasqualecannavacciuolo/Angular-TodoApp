@@ -1,5 +1,5 @@
 export interface Item {
-    id: number;
-    content: string;
-    done?: boolean;
+    id?: number;
+    contenuto: string;
+    fatto?: boolean;
 }
