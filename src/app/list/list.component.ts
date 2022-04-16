@@ -11,9 +11,7 @@ import { Item } from '../model/item';
 export class ListComponent {
 
   dataSource: Item[] = [];
-  newItem: Item | undefined;
   displayedColumns: string[] = ['id', 'contenuto', 'fatto'];
-
   
 
   constructor(private http: HttpClient) {
@@ -22,10 +20,10 @@ export class ListComponent {
   
 
   getAll() {
-    this.http
+    return this.http
       .get<Item[]>('http://localhost:3000/lista')
       .subscribe((result) => this.dataSource = result);
-  }
+  }// Fine GETALL
 
 
   deleteItem(selected: any): void {
@@ -42,9 +40,11 @@ export class ListComponent {
             .subscribe(() => {
               const index = this.dataSource.indexOf(this.dataSource[i]);
               this.dataSource.splice(index, 1);
+              this.getAll();  // Aggiorno la lista in tempo reale
             });
         }
       }
     }
-  }
+  }// Fine DELETE
+
 }

@@ -6,7 +6,12 @@
       "fatto": false
     },
     {
-      "contenuto": "Comprare banane",
+      "contenuto": "Compare pomodori",
+      "fatto": false,
+      "id": 2
+    },
+    {
+      "contenuto": "Comprare limoni",
       "fatto": false,
       "id": 3
     },
@@ -16,19 +21,14 @@
       "id": 4
     },
     {
-      "contenuto": "Compare pomodori",
+      "contenuto": "Melinda",
       "fatto": false,
       "id": 5
     },
     {
-      "contenuto": "Banane",
+      "contenuto": "Leminda",
       "fatto": false,
       "id": 6
-    },
-    {
-      "contenuto": "sasa",
-      "fatto": false,
-      "id": 7
     }
   ]
 }

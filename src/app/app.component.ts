@@ -1,4 +1,5 @@
-import { Component} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
+import { Item } from './model/item';
 
 
 @Component({
@@ -10,6 +11,7 @@ export class AppComponent{
   
 
   title = 'my-app';
-
   
+  
+
 }
