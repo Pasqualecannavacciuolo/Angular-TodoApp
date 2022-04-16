@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Item } from '../model/item';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AppComponent } from '../app.component';
 
 
@@ -57,7 +57,12 @@ export class ListComponent {
 
   // INSERT NEW ITEM
   todoForm = new FormGroup({
-    content: new FormControl(''),
+    content: new FormControl('',
+      [
+        Validators.required,
+        Validators.minLength(4)
+      ]
+    ),
   });
 
   newItem: Item = {

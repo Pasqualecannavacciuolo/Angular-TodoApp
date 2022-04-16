@@ -23,6 +23,7 @@ mat-label {
 }
 
 button {
+  background-color: #ffd740;
   width: 100px;
   text-align: center;
   justify-content: center;
