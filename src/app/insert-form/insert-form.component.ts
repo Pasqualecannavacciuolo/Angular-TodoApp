@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Item } from '../model/item';
@@ -34,8 +34,8 @@ export class InsertFormComponent {
     .post<Item>('http://localhost:3000/lista',this.newItem)
     .subscribe((result) => {
       console.log(result);
+      this.api.dataSource.push(this.newItem);
     })
-    
   }
 
 }

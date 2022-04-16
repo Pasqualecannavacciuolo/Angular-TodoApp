@@ -1,2 +1,2 @@
-<app-toolbar></app-toolbar>
-<app-list></app-list>
+<app-toolbar (newItemEvent)="addItem()"></app-toolbar>
+<app-list [showForm]="showForm"></app-list>

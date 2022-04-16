@@ -1,5 +1,4 @@
-import { Component, Input, OnInit} from '@angular/core';
-import { Item } from './model/item';
+import { Component} from '@angular/core';
 
 
 @Component({
@@ -12,6 +11,15 @@ export class AppComponent{
 
   title = 'my-app';
   
-  
+ showForm = false;
+
+  addItem() {
+    if(this.showForm) {
+      this.showForm = false;
+    } else {
+      this.showForm = true;
+    }
+    console.log(this.showForm)
+  }
 
 }

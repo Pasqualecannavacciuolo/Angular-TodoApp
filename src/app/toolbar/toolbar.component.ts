@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,14 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent {
 
-  showForm = false;
+  @Output() newItemEvent = new EventEmitter<boolean>();
+
+  showForm: boolean = false;
 
   addItem() {
-    if(this.showForm) {
-      this.showForm = false;
-    } else {
-      this.showForm = true;
-    }
+    this.newItemEvent.emit(this.showForm);
   }
 
 }
