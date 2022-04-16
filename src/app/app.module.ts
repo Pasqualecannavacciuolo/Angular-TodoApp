@@ -8,7 +8,6 @@ import { MaterialModule } from './material.module';
 import { ListComponent } from './list/list.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { InsertFormComponent } from './insert-form/insert-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
@@ -16,8 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     ToolbarComponent,
-    ListComponent,
-    InsertFormComponent
+    ListComponent  
   ],
   imports: [
     BrowserModule,
